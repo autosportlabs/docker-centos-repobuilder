@@ -2,8 +2,8 @@
 
 [ -z $AWS_ACCESS_KEY ] && { echo "no value for AWS_ACCESS_KEY"; exit 1; }
 [ -z $AWS_SECRET_KEY ] && { echo "no value for AWS_SECRET_KEY"; exit 1; }
-[ -z $BUCKET ]         && { echo "no value for BUCKET"; exit 1; }
-[ -z $REPO ]           && { echo "no value for REPO"; exit 1; }
+[ -z $BUCKET ]         && { echo "no value for BUCKET"; exit 1; } ## asl-docker
+[ -z $REPO ]           && { echo "no value for REPO"; exit 1; } ## el6
 
 set -e
 
@@ -18,5 +18,5 @@ docker run \
     -e AWS_SECRET_KEY \
     -e BUCKET \
     -e REPO \
-    localhost:5000/tools/centos-buildtools \
+    zardoz.podzone.org:11003/tools/centos-buildtools \
     /scripts/build_all.sh
