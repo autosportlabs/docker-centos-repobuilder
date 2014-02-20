@@ -18,5 +18,6 @@ docker run \
     -e AWS_SECRET_KEY \
     -e BUCKET \
     -e REPO \
+    -i -t \
     zardoz.podzone.org:11003/tools/centos-buildtools \
     /scripts/build_all.sh
